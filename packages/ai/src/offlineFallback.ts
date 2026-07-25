@@ -4,6 +4,7 @@ import type { BereaAIProvider, HomeworkContext } from "./types";
 const MEMORY_ANCHORS: Record<string, string> = {
   "make-a-ten": "Whatever's in the ten-frame, the empty slots are what's left of ten.",
   "subtraction-within-10": "What's taken away leaves the group — count what's still there, not what left.",
+  "place-value-base-ten": "A ten-rod is always ten — count the loose ones, then add them to ten.",
 };
 
 /**

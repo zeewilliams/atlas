@@ -1,0 +1,28 @@
+{
+  "skillId": "place-value-base-ten",
+  "title": "Place Value: Base Ten Models",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 3,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.NBT.1.1 — Compose/decompose 11-19 into ten ones and some further ones",
+    "interactionType": "drag-drop-equation",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "tens fixed at 1 (teen numbers 11-19); ones 1-3 easy, 4-5 mid, 6-9 unlock at higher levels",
+    "lever2Scaffolding": "base-ten scene (ten-rod + loose ones) shown at all levels in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not applicable — place value questions are numeric only, no word-problem context"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}

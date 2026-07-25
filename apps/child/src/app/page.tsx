@@ -18,6 +18,12 @@ export default function Home() {
         >
           Start: Subtraction within 10
         </Link>
+        <Link
+          href="/lesson/place-value-base-ten"
+          className="cursor-pointer rounded-pill bg-primary px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Place Value
+        </Link>
       </div>
     </main>
   );
