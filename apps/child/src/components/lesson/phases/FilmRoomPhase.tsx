@@ -3,18 +3,15 @@
 import { useEffect, useState } from "react";
 import type { Lesson } from "@atlas/curriculum";
 import { CoachSpeech } from "@/components/lesson/CoachSpeech";
-import { MakeATenScene } from "@/components/lesson/scene/MakeATenScene";
+import { LessonScene } from "@/components/lesson/LessonScene";
 
-// Make-a-Ten-specific pairing of each caption with the filled count that
-// demonstrates it. A future lesson with its own Film Room would define its
-// own step/scene mapping rather than reusing this one.
-const FILLED_BY_STEP = [0, 8, 8, 8];
 const STEP_DURATION_MS = 6000;
 
 export function FilmRoomPhase({ lesson, onComplete }: { lesson: Lesson; onComplete: () => void }) {
   const [stepIndex, setStepIndex] = useState(0);
   const steps = lesson.filmRoomScript;
   const isLastStep = stepIndex === steps.length - 1;
+  const step = steps[stepIndex];
 
   useEffect(() => {
     if (isLastStep) return;
@@ -22,12 +19,10 @@ export function FilmRoomPhase({ lesson, onComplete }: { lesson: Lesson; onComple
     return () => clearTimeout(timer);
   }, [stepIndex, isLastStep]);
 
-  const filled = FILLED_BY_STEP[stepIndex] ?? 8;
-
   return (
     <div className="flex flex-col items-center gap-6">
-      <MakeATenScene filled={filled} />
-      <CoachSpeech text={steps[stepIndex] ?? ""} />
+      {step && <LessonScene sceneKind={lesson.sceneKind} visual={step.visual} />}
+      <CoachSpeech text={step?.caption ?? ""} />
       <button
         type="button"
         onClick={() => (isLastStep ? onComplete() : setStepIndex((i) => i + 1))}

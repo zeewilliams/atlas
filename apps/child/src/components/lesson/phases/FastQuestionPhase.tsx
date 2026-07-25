@@ -1,22 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import type { Lesson } from "@atlas/curriculum";
+import type { Lesson, QuestionInteraction } from "@atlas/curriculum";
 import { CoachSpeech } from "@/components/lesson/CoachSpeech";
 import { EquationDragDrop } from "@/components/fast/EquationDragDrop";
+import { AudioReadQuestion } from "@/components/fast/AudioReadQuestion";
+
+const INTRO_TEXT: Partial<Record<QuestionInteraction, string>> = {
+  "drag-drop-equation": "Drag the missing number into the blank — just like on the real test.",
+  "audio-read": "Listen to the question, then pick your answer — just like on the real test.",
+};
 
 export function FastQuestionPhase({ lesson, onComplete }: { lesson: Lesson; onComplete: () => void }) {
   const [done, setDone] = useState(false);
+  const question = lesson.fastQuestion;
+  const handleComplete = (correct: boolean) => {
+    if (correct) setDone(true);
+  };
 
   return (
     <div className="flex flex-col items-center gap-8">
-      <CoachSpeech text="Drag the missing number into the blank — just like on the real test." />
-      <EquationDragDrop
-        question={lesson.fastQuestion}
-        onComplete={(correct) => {
-          if (correct) setDone(true);
-        }}
-      />
+      <CoachSpeech text={INTRO_TEXT[question.interaction] ?? "Answer just like on the real test."} />
+      {question.interaction === "drag-drop-equation" && (
+        <EquationDragDrop question={question} onComplete={handleComplete} />
+      )}
+      {question.interaction === "audio-read" && (
+        <AudioReadQuestion question={question} onComplete={handleComplete} />
+      )}
       {done && (
         <button
           type="button"

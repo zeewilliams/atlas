@@ -33,6 +33,16 @@ export interface Question {
   explanation: string;
   /** True for a twin generated to replace a two-miss question; must clear before lesson ends. */
   isTwin?: boolean;
+  /** Plain-data scene parameters the UI maps to a visual via the lesson's sceneKind. */
+  visual?: Record<string, number>;
+}
+
+/** Which R3F scene component renders a lesson's mental-model visual. */
+export type SceneKind = "ten-frame" | "take-away";
+
+export interface FilmRoomStep {
+  caption: string;
+  visual: Record<string, number>;
 }
 
 export type QuestionOutcome = "first-try" | "second-try" | "missed-twice";
@@ -54,15 +64,18 @@ export interface Lesson {
   skillId: string;
   title: string;
   concept: Concept;
+  /** Which R3F scene renders this lesson's mental-model visual. */
+  sceneKind: SceneKind;
   /** Phase 1 — Hook: the question Zee doesn't know the answer to yet. */
   hook: string;
-  /** Phase 2 — Film Room: caption script for the 3D mental-model scene. */
-  filmRoomScript: string[];
+  /** Phase 2 — Film Room: caption + visual pairs for the 3D mental-model scene. */
+  filmRoomScript: FilmRoomStep[];
   /** Phase 3 — Guided Example: coach walks one complete problem, step narration. */
   guidedExample: {
     prompt: string;
     steps: string[];
     answer: string;
+    visual: Record<string, number>;
   };
   /** Phase 4 — generates a fresh practice question (and twins use the same generator). */
   generatePracticeQuestion: (level: number) => Question;

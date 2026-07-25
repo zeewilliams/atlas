@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import type { Lesson } from "@atlas/curriculum";
 import { useMasteryStore } from "@atlas/store";
 import { CoachSpeech } from "@/components/lesson/CoachSpeech";
-import { MakeATenScene } from "@/components/lesson/scene/MakeATenScene";
+import { LessonScene } from "@/components/lesson/LessonScene";
 
 const PRACTICE_QUESTION_COUNT = 5;
 // Lever 1 (number range) will eventually read/write this per-skill; fixed
@@ -62,8 +62,6 @@ export function PracticePhase({ lesson, onComplete }: { lesson: Lesson; onComple
     return <p className="text-white/70">Loading practice…</p>;
   }
 
-  const filled = Number(currentQuestion.prompt.split(" ")[0]) || 0;
-
   return (
     <div className="flex flex-col items-center gap-6">
       <div className="text-xs font-semibold uppercase tracking-wide text-white/50">
@@ -72,9 +70,13 @@ export function PracticePhase({ lesson, onComplete }: { lesson: Lesson; onComple
         {progress.pendingTwins > 0 &&
           ` · ${progress.pendingTwins} to clear`}
       </div>
-      <MakeATenScene filled={filled} />
+      {currentQuestion.visual && (
+        <LessonScene sceneKind={lesson.sceneKind} visual={currentQuestion.visual} />
+      )}
       <CoachSpeech text={message} />
-      <p className="text-2xl font-extrabold text-white">{currentQuestion.prompt}</p>
+      <p className="max-w-md text-center text-2xl font-extrabold text-white">
+        {currentQuestion.prompt}
+      </p>
       <div className="flex flex-wrap justify-center gap-4">
         {currentQuestion.choices.map((choice) => (
           <button

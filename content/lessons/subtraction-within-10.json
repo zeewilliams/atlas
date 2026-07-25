@@ -1,0 +1,28 @@
+{
+  "skillId": "subtraction-within-10",
+  "title": "Subtraction within 10",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 2,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.OA.1.2 — Subtraction within 10 word problems",
+    "interactionType": "audio-read",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "start 4-10, removed 1-start; zero remainder only unlocks at higher levels",
+    "lever2Scaffolding": "take-away scene shown at all levels in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "wired via packages/curriculum contextBank — sports ~20%, six other categories share the rest, no real names (Security Rule 4)"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}

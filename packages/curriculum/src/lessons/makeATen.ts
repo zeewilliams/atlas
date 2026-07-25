@@ -63,6 +63,7 @@ export function generateMakeATenQuestion(level: number): Question {
     correctAnswer: String(correct),
     tier1Hint: `Count up from ${addend} to 10 — how many more do you need?`,
     explanation: `${addend} + ${correct} = 10, because ${addend} and ${correct} together fill all ten slots in the ten-frame.`,
+    visual: { filled: addend },
   };
 }
 
@@ -81,12 +82,14 @@ function buildFastQuestion(): Question {
     correctAnswer: String(correct),
     tier1Hint: `Drag the number that fills the rest of the ten-frame.`,
     explanation: `${addend} + ${correct} = 10.`,
+    visual: { filled: addend },
   };
 }
 
 export const makeATenLesson: Lesson = {
   skillId: SKILL_ID,
   title: "Make a Ten",
+  sceneKind: "ten-frame",
   concept: {
     id: "make-a-ten",
     skillId: SKILL_ID,
@@ -94,10 +97,22 @@ export const makeATenLesson: Lesson = {
   },
   hook: "If a ten-frame has 8 dots in it, how many empty spots are left — and how do you know without counting one by one?",
   filmRoomScript: [
-    "This is a ten-frame. It always has exactly ten slots — two rows of five.",
-    "When 8 slots are filled, the empty slots are what's left of 10.",
-    "You don't need to count the filled ones again — you only count what's missing.",
-    "8 filled and 2 empty. 8 + 2 = 10, every time, because the frame only ever holds ten.",
+    {
+      caption: "This is a ten-frame. It always has exactly ten slots — two rows of five.",
+      visual: { filled: 0 },
+    },
+    {
+      caption: "When 8 slots are filled, the empty slots are what's left of 10.",
+      visual: { filled: 8 },
+    },
+    {
+      caption: "You don't need to count the filled ones again — you only count what's missing.",
+      visual: { filled: 8 },
+    },
+    {
+      caption: "8 filled and 2 empty. 8 + 2 = 10, every time, because the frame only ever holds ten.",
+      visual: { filled: 8 },
+    },
   ],
   guidedExample: {
     prompt: "6 + ? = 10",
@@ -107,6 +122,7 @@ export const makeATenLesson: Lesson = {
       "6 + 4 = 10.",
     ],
     answer: "4",
+    visual: { filled: 6 },
   },
   generatePracticeQuestion: generateMakeATenQuestion,
   fastQuestion: buildFastQuestion(),
