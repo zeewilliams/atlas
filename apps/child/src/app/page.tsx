@@ -24,6 +24,12 @@ export default function Home() {
         >
           Start: Place Value
         </Link>
+        <Link
+          href="/lesson/nonstandard-measurement"
+          className="cursor-pointer rounded-pill bg-primary px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Measurement
+        </Link>
       </div>
     </main>
   );

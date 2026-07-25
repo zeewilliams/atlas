@@ -5,10 +5,12 @@ import type { Lesson, QuestionInteraction } from "@atlas/curriculum";
 import { CoachSpeech } from "@/components/lesson/CoachSpeech";
 import { EquationDragDrop } from "@/components/fast/EquationDragDrop";
 import { AudioReadQuestion } from "@/components/fast/AudioReadQuestion";
+import { PictureSelectQuestion } from "@/components/fast/PictureSelectQuestion";
 
 const INTRO_TEXT: Partial<Record<QuestionInteraction, string>> = {
   "drag-drop-equation": "Drag the missing number into the blank — just like on the real test.",
   "audio-read": "Listen to the question, then pick your answer — just like on the real test.",
+  "picture-select": "Tap the picture with the right answer — just like on the real test.",
 };
 
 export function FastQuestionPhase({ lesson, onComplete }: { lesson: Lesson; onComplete: () => void }) {
@@ -26,6 +28,9 @@ export function FastQuestionPhase({ lesson, onComplete }: { lesson: Lesson; onCo
       )}
       {question.interaction === "audio-read" && (
         <AudioReadQuestion question={question} onComplete={handleComplete} />
+      )}
+      {question.interaction === "picture-select" && (
+        <PictureSelectQuestion question={question} onComplete={handleComplete} />
       )}
       {done && (
         <button

@@ -1,0 +1,28 @@
+{
+  "skillId": "nonstandard-measurement",
+  "title": "Measuring with Paper Clips",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 4,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.MD.1.1/1.2 — Measure length with nonstandard units",
+    "interactionType": "picture-select",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "object length 2-4 easy, 3-6 mid, 4-9 unlock at higher levels",
+    "lever2Scaffolding": "unit row always shown pre-counted in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not applicable — object being measured is generic, no word-problem context"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}

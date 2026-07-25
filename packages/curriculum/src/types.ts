@@ -38,7 +38,7 @@ export interface Question {
 }
 
 /** Which R3F scene component renders a lesson's mental-model visual. */
-export type SceneKind = "ten-frame" | "take-away" | "base-ten";
+export type SceneKind = "ten-frame" | "take-away" | "base-ten" | "measurement";
 
 export interface FilmRoomStep {
   caption: string;
