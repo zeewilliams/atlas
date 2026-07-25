@@ -1,0 +1,28 @@
+{
+  "skillId": "make-a-ten",
+  "title": "Make a Ten",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 1,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.OA.1.4 — Make a Ten",
+    "interactionType": "drag-drop-equation",
+    "frequency": "highest FAST frequency skill for PM1"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "addends 1-9, summing to 10; harder (smaller) addends unlock at higher levels",
+    "lever2Scaffolding": "ten-frame visual shown at all levels in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not yet applied — practice questions are numeric only, no word-problem context bank wired in"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}

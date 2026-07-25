@@ -1,0 +1,39 @@
+# Atlas private / internal — NEVER commit
+docs/private/
+skills/
+.env
+.env.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+apps/*/.next/
+apps/*/out/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Generated / cached assets
+public/generated/
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+
+# Misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+
+# Claude Code local settings (machine-specific, not shared project config)
+.claude/settings.local.json

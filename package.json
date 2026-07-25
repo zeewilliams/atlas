@@ -1,0 +1,19 @@
+{
+  "name": "atlas",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Project Atlas — adaptive learning platform powered by Berea AI",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/child",
+    "build": "npm run build --workspace=apps/child",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
