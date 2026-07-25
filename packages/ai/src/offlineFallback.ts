@@ -6,6 +6,7 @@ const MEMORY_ANCHORS: Record<string, string> = {
   "subtraction-within-10": "What's taken away leaves the group — count what's still there, not what left.",
   "place-value-base-ten": "A ten-rod is always ten — count the loose ones, then add them to ten.",
   "nonstandard-measurement": "Count the units laid end to end, with no gaps — that count is the length.",
+  "equal-sets": "If every one has a partner and nobody's left over, the groups are equal.",
 };
 
 /**

@@ -35,10 +35,12 @@ export interface Question {
   isTwin?: boolean;
   /** Plain-data scene parameters the UI maps to a visual via the lesson's sceneKind. */
   visual?: Record<string, number>;
+  /** For multiple-choice-multi: the full set of choice ids that must all be selected. */
+  correctAnswers?: string[];
 }
 
 /** Which R3F scene component renders a lesson's mental-model visual. */
-export type SceneKind = "ten-frame" | "take-away" | "base-ten" | "measurement";
+export type SceneKind = "ten-frame" | "take-away" | "base-ten" | "measurement" | "equal-sets";
 
 export interface FilmRoomStep {
   caption: string;

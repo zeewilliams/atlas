@@ -1,0 +1,28 @@
+{
+  "skillId": "equal-sets",
+  "title": "Equal Sets",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 5,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.CC.3.6 / K.MD.2.3 — Compare sets via one-to-one correspondence",
+    "interactionType": "multiple-choice-multi",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "group sizes 2-4 easy, 3-6 mid, 3-8 unlock at higher levels",
+    "lever2Scaffolding": "matched/unmatched pairing always shown in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not applicable — groups are generic unit shapes, no word-problem context"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}

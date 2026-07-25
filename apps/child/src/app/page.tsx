@@ -30,6 +30,12 @@ export default function Home() {
         >
           Start: Measurement
         </Link>
+        <Link
+          href="/lesson/equal-sets"
+          className="cursor-pointer rounded-pill bg-primary px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Equal Sets
+        </Link>
       </div>
     </main>
   );
