@@ -17,8 +17,8 @@ interface AdjectiveHighlightGroupProps {
 export function AdjectiveHighlightGroup({ before, adjective, after, noun }: AdjectiveHighlightGroupProps) {
   return (
     <group>
-      <Html position={[0, 0.5, 0]} center>
-        <p className="max-w-sm text-center text-2xl font-bold text-white">
+      <Html position={[0, 0.5, 0]} center style={{ width: "420px" }}>
+        <p className="text-center text-2xl font-bold text-white">
           {before}
           <span className="text-accent">{adjective}</span>
           {after}

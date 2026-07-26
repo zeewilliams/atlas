@@ -18,8 +18,8 @@ export function FactOpinionGroup({ sentence, isFact }: FactOpinionGroupProps) {
 
   return (
     <group>
-      <Html position={[0, 0.5, 0]} center>
-        <p className="max-w-sm text-center text-xl font-bold text-white">{sentence}</p>
+      <Html position={[0, 0.5, 0]} center style={{ width: "420px" }}>
+        <p className="text-center text-xl font-bold text-white">{sentence}</p>
       </Html>
       <mesh position={[0, -0.9, -0.1]}>
         <planeGeometry args={[3.6, 0.6]} />
