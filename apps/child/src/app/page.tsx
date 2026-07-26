@@ -48,6 +48,48 @@ export default function Home() {
         >
           Start: More or Fewer
         </Link>
+        <Link
+          href="/lesson/rhyming"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Rhyming
+        </Link>
+        <Link
+          href="/lesson/beginning-sounds"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Beginning Sounds
+        </Link>
+        <Link
+          href="/lesson/word-recognition"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Word Recognition
+        </Link>
+        <Link
+          href="/lesson/describing-words"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Describing Words
+        </Link>
+        <Link
+          href="/lesson/story-setting"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Story Setting
+        </Link>
+        <Link
+          href="/lesson/prediction"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Prediction
+        </Link>
+        <Link
+          href="/lesson/fact-vs-opinion"
+          className="cursor-pointer rounded-pill bg-zone-active px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: Fact vs. Opinion
+        </Link>
       </div>
     </main>
   );
