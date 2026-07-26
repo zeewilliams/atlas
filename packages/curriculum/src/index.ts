@@ -6,5 +6,6 @@ export { subtractionWithin10Lesson, generateSubtractionQuestion } from "./lesson
 export { placeValueBaseTenLesson, generatePlaceValueQuestion } from "./lessons/placeValueBaseTen";
 export { nonstandardMeasurementLesson, generateMeasurementQuestion } from "./lessons/nonstandardMeasurement";
 export { equalSetsLesson, generateEqualSetsQuestion } from "./lessons/equalSets";
+export { equationStructureLesson, generateEquationStructureQuestion } from "./lessons/equationStructure";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";

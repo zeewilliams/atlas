@@ -6,6 +6,7 @@ import { SubtractionScene } from "@/components/lesson/scene/SubtractionScene";
 import { BaseTenScene } from "@/components/lesson/scene/BaseTenScene";
 import { MeasurementScene } from "@/components/lesson/scene/MeasurementScene";
 import { EqualSetsScene } from "@/components/lesson/scene/EqualSetsScene";
+import { PartWholeScene } from "@/components/lesson/scene/PartWholeScene";
 
 /** Dispatches to the right R3F scene for a lesson's sceneKind. */
 export function LessonScene({ sceneKind, visual }: { sceneKind: SceneKind; visual: Record<string, number> }) {
@@ -20,6 +21,8 @@ export function LessonScene({ sceneKind, visual }: { sceneKind: SceneKind; visua
       return <MeasurementScene length={visual["length"] ?? 1} />;
     case "equal-sets":
       return <EqualSetsScene countA={visual["countA"] ?? 0} countB={visual["countB"] ?? 0} />;
+    case "part-whole":
+      return <PartWholeScene a={visual["a"] ?? 0} b={visual["b"] ?? 0} blank={visual["blank"] ?? 0} />;
     default:
       return null;
   }

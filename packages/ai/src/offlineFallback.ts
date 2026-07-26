@@ -7,6 +7,7 @@ const MEMORY_ANCHORS: Record<string, string> = {
   "place-value-base-ten": "A ten-rod is always ten — count the loose ones, then add them to ten.",
   "nonstandard-measurement": "Count the units laid end to end, with no gaps — that count is the length.",
   "equal-sets": "If every one has a partner and nobody's left over, the groups are equal.",
+  "equation-structure": "The equals sign means both sides match — the blank can be any part, not just the answer.",
 };
 
 /**

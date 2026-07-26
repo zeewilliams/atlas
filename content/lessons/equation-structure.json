@@ -1,0 +1,28 @@
+{
+  "skillId": "equation-structure",
+  "title": "Equation Structure",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 6,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.OA.1.1/1.4 — Equation structure, drag numbers into blanks in any position",
+    "interactionType": "drag-drop-equation",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "sums within 6 easy, within 8 mid, within 10 unlock at higher levels",
+    "lever2Scaffolding": "part-whole bar shown at all levels in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not applicable — pure equation format, no word-problem context"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ]
+}
