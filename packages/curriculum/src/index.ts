@@ -11,5 +11,6 @@ export { comparisonLesson, generateComparisonQuestion } from "./lessons/comparis
 export { rhymingLesson, generateRhymingQuestion } from "./lessons/rhyming";
 export { beginningSoundsLesson, generateBeginningSoundsQuestion } from "./lessons/beginningSounds";
 export { wordRecognitionLesson, generateWordRecognitionQuestion } from "./lessons/wordRecognition";
+export { describingWordsLesson, generateDescribingWordsQuestion } from "./lessons/describingWords";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";
