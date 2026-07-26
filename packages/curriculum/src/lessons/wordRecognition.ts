@@ -77,7 +77,7 @@ function buildFastQuestion(): Question {
     id: randomId("word-recognition-fast"),
     skillId: SKILL_ID,
     interaction: "drag-drop-word",
-    prompt: "___",
+    prompt: "The real word: ___",
     choices,
     correctAnswer: real,
     tier1Hint: "Drag the one that's a real word into the blank.",

@@ -94,7 +94,7 @@ function buildFastQuestion(): Question {
     id: randomId("rhyming-fast"),
     skillId: SKILL_ID,
     interaction: "drag-drop-word",
-    prompt: "___",
+    prompt: `Rhymes with "${target}": ___`,
     choices,
     correctAnswer: correct,
     tier1Hint: `Drag the word that ends with the same sound as "${target}".`,
