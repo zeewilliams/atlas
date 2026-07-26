@@ -1,0 +1,29 @@
+{
+  "skillId": "comparison",
+  "title": "More or Fewer",
+  "track": "math",
+  "sprint": "sprint-1-pm1-prep",
+  "buildOrder": 7,
+  "fastAlignment": {
+    "assessment": "Star Math",
+    "window": "PM1",
+    "standard": "MAFS.K.CC.3.6/3.7 — Compare two groups/numbers, greater than/less than, multi-select",
+    "interactionType": "multiple-choice-multi",
+    "frequency": "core PM1 skill"
+  },
+  "adaptiveDifficulty": {
+    "lever1NumberRange": "gap between groups 3-4 easy, 2-3 mid, 1-2 unlock at higher levels (harder to discriminate)",
+    "lever2Scaffolding": "matched/unmatched pairing always shown in this first pass — level-gated scaffolding removal not yet implemented",
+    "lever3ContextRotation": "not applicable — groups are generic unit shapes, no word-problem context"
+  },
+  "phases": [
+    "hook",
+    "film-room",
+    "guided-example",
+    "practice",
+    "fast-format-question",
+    "memory-anchor",
+    "post-game"
+  ],
+  "notes": "Reuses the equal-sets sceneKind/scene and MultiSelectQuestion FAST component as-is — comparison is the same one-to-one pairing mechanism as Lesson 5, just asking which side has the leftover."
+}

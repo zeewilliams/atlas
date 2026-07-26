@@ -8,6 +8,7 @@ const MEMORY_ANCHORS: Record<string, string> = {
   "nonstandard-measurement": "Count the units laid end to end, with no gaps — that count is the length.",
   "equal-sets": "If every one has a partner and nobody's left over, the groups are equal.",
   "equation-structure": "The equals sign means both sides match — the blank can be any part, not just the answer.",
+  comparison: "Whoever's left over after matching has more — the other side has fewer.",
 };
 
 /**

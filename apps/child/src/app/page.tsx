@@ -42,6 +42,12 @@ export default function Home() {
         >
           Start: Equation Structure
         </Link>
+        <Link
+          href="/lesson/comparison"
+          className="cursor-pointer rounded-pill bg-primary px-8 py-4 text-lg font-bold text-white shadow-atlas transition-transform duration-200 hover:scale-105"
+        >
+          Start: More or Fewer
+        </Link>
       </div>
     </main>
   );
