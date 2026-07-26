@@ -1,10 +1,16 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export function useSpeech() {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const isSupported = typeof window !== "undefined" && "speechSynthesis" in window;
+  // Detected post-mount only, so the server render and first client paint
+  // agree (both without the speak button) — no hydration mismatch.
+  const [isSupported, setIsSupported] = useState(false);
+
+  useEffect(() => {
+    setIsSupported("speechSynthesis" in window);
+  }, []);
 
   const speak = useCallback(
     (text: string) => {

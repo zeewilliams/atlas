@@ -1,3 +1,5 @@
+"use client";
+
 import { equationStructureLesson } from "@atlas/curriculum";
 import { LessonFlow } from "@/components/lesson/LessonFlow";
 

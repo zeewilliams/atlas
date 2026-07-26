@@ -1,3 +1,5 @@
+"use client";
+
 import { storySettingLesson } from "@atlas/curriculum";
 import { LessonFlow } from "@/components/lesson/LessonFlow";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { placeValueBaseTenLesson } from "@atlas/curriculum";
 import { LessonFlow } from "@/components/lesson/LessonFlow";
 
