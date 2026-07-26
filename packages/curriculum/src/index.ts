@@ -13,5 +13,6 @@ export { beginningSoundsLesson, generateBeginningSoundsQuestion } from "./lesson
 export { wordRecognitionLesson, generateWordRecognitionQuestion } from "./lessons/wordRecognition";
 export { describingWordsLesson, generateDescribingWordsQuestion } from "./lessons/describingWords";
 export { storySettingLesson, generateStorySettingQuestion } from "./lessons/storySetting";
+export { predictionLesson, generatePredictionQuestion } from "./lessons/prediction";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";
