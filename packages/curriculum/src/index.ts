@@ -10,5 +10,6 @@ export { equationStructureLesson, generateEquationStructureQuestion } from "./le
 export { comparisonLesson, generateComparisonQuestion } from "./lessons/comparison";
 export { rhymingLesson, generateRhymingQuestion } from "./lessons/rhyming";
 export { beginningSoundsLesson, generateBeginningSoundsQuestion } from "./lessons/beginningSounds";
+export { wordRecognitionLesson, generateWordRecognitionQuestion } from "./lessons/wordRecognition";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";
