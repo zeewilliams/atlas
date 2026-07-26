@@ -7,17 +7,24 @@ import { EquationDragDrop } from "@/components/fast/EquationDragDrop";
 import { AudioReadQuestion } from "@/components/fast/AudioReadQuestion";
 import { PictureSelectQuestion } from "@/components/fast/PictureSelectQuestion";
 import { MultiSelectQuestion } from "@/components/fast/MultiSelectQuestion";
+import { WordDragDrop } from "@/components/fast/WordDragDrop";
+import { WordMultiSelectQuestion } from "@/components/fast/WordMultiSelectQuestion";
+import { SimpleChoiceQuestion } from "@/components/fast/SimpleChoiceQuestion";
+import { SettingPictureSelect } from "@/components/fast/SettingPictureSelect";
 
 const INTRO_TEXT: Partial<Record<QuestionInteraction, string>> = {
   "drag-drop-equation": "Drag the missing number into the blank — just like on the real test.",
+  "drag-drop-word": "Drag the right word into the blank — just like on the real test.",
   "audio-read": "Listen to the question, then pick your answer — just like on the real test.",
   "picture-select": "Tap the picture with the right answer — just like on the real test.",
-  "multiple-choice-multi": "Select every group that matches — there may be more than one.",
+  "multiple-choice-multi": "Select every one that matches — there may be more than one.",
+  "multiple-choice-single": "Pick your answer — just like on the real test.",
 };
 
 export function FastQuestionPhase({ lesson, onComplete }: { lesson: Lesson; onComplete: () => void }) {
   const [done, setDone] = useState(false);
   const question = lesson.fastQuestion;
+  const isWordBased = !question.visual;
   const handleComplete = (correct: boolean) => {
     if (correct) setDone(true);
   };
@@ -28,14 +35,26 @@ export function FastQuestionPhase({ lesson, onComplete }: { lesson: Lesson; onCo
       {question.interaction === "drag-drop-equation" && (
         <EquationDragDrop question={question} onComplete={handleComplete} />
       )}
+      {question.interaction === "drag-drop-word" && (
+        <WordDragDrop question={question} onComplete={handleComplete} />
+      )}
       {question.interaction === "audio-read" && (
         <AudioReadQuestion question={question} onComplete={handleComplete} />
       )}
-      {question.interaction === "picture-select" && (
+      {question.interaction === "picture-select" && isWordBased && (
+        <SettingPictureSelect question={question} onComplete={handleComplete} />
+      )}
+      {question.interaction === "picture-select" && !isWordBased && (
         <PictureSelectQuestion question={question} onComplete={handleComplete} />
       )}
-      {question.interaction === "multiple-choice-multi" && (
+      {question.interaction === "multiple-choice-multi" && isWordBased && (
+        <WordMultiSelectQuestion question={question} onComplete={handleComplete} />
+      )}
+      {question.interaction === "multiple-choice-multi" && !isWordBased && (
         <MultiSelectQuestion question={question} onComplete={handleComplete} />
+      )}
+      {question.interaction === "multiple-choice-single" && (
+        <SimpleChoiceQuestion question={question} onComplete={handleComplete} />
       )}
       {done && (
         <button

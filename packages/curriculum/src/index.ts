@@ -8,5 +8,6 @@ export { nonstandardMeasurementLesson, generateMeasurementQuestion } from "./les
 export { equalSetsLesson, generateEqualSetsQuestion } from "./lessons/equalSets";
 export { equationStructureLesson, generateEquationStructureQuestion } from "./lessons/equationStructure";
 export { comparisonLesson, generateComparisonQuestion } from "./lessons/comparison";
+export { rhymingLesson, generateRhymingQuestion } from "./lessons/rhyming";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";

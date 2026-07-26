@@ -21,7 +21,9 @@ export function FilmRoomPhase({ lesson, onComplete }: { lesson: Lesson; onComple
 
   return (
     <div className="flex flex-col items-center gap-6">
-      {step && <LessonScene sceneKind={lesson.sceneKind} visual={step.visual} />}
+      {step && (
+        <LessonScene sceneKind={lesson.sceneKind} visual={step.visual} textVisual={step.textVisual} />
+      )}
       <CoachSpeech text={step?.caption ?? ""} />
       <button
         type="button"

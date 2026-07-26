@@ -40,11 +40,26 @@ export interface Question {
 }
 
 /** Which R3F scene component renders a lesson's mental-model visual. */
-export type SceneKind = "ten-frame" | "take-away" | "base-ten" | "measurement" | "equal-sets" | "part-whole";
+export type SceneKind =
+  | "ten-frame"
+  | "take-away"
+  | "base-ten"
+  | "measurement"
+  | "equal-sets"
+  | "part-whole"
+  | "rhyme-pair"
+  | "sound-match"
+  | "letter-word"
+  | "adjective-highlight"
+  | "story-setting"
+  | "prediction-clues"
+  | "fact-opinion";
 
 export interface FilmRoomStep {
   caption: string;
   visual: Record<string, number>;
+  /** Word/text content for ELA scenes, which have nothing numeric to show. */
+  textVisual?: Record<string, string>;
 }
 
 export type QuestionOutcome = "first-try" | "second-try" | "missed-twice";
@@ -78,6 +93,8 @@ export interface Lesson {
     steps: string[];
     answer: string;
     visual: Record<string, number>;
+    /** Word/text content for ELA scenes, which have nothing numeric to show. */
+    textVisual?: Record<string, string>;
   };
   /** Phase 4 — generates a fresh practice question (and twins use the same generator). */
   generatePracticeQuestion: (level: number) => Question;
