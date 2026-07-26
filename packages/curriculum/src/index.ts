@@ -14,5 +14,6 @@ export { wordRecognitionLesson, generateWordRecognitionQuestion } from "./lesson
 export { describingWordsLesson, generateDescribingWordsQuestion } from "./lessons/describingWords";
 export { storySettingLesson, generateStorySettingQuestion } from "./lessons/storySetting";
 export { predictionLesson, generatePredictionQuestion } from "./lessons/prediction";
+export { factVsOpinionLesson, generateFactVsOpinionQuestion } from "./lessons/factVsOpinion";
 export { pickContextItem } from "./contextBank";
 export type { ContextCategory, ContextItem } from "./contextBank";
